@@ -26,10 +26,15 @@ api реализовывает:
 :computer: Выполнить следующие команды:    
 ```php
 git clone https://github.com/Gaad018/apiForInterview
+cd apiForInterview
 composer install
 ```
-:open_file_folder: Перейти в папку проекта    
-:pencil2: Вписать данные в файл .env    
+:heavy_check_mark: Чтобы убедиться, что laravel готов к запуску выполните следующую команду:    
+```
+php artisan
+```
+:pencil2: Скопировать данные из файла .env.example новый файл .env    
+:books: Создать базу данных laravel (utf8mb4_unicode_ci)    
 :computer: Выполнить следующие команды:    
 ```php
 php artisan migrate
