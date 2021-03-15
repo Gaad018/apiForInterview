@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//products
+Route::apiResource('/products', App\Http\Controllers\ProductController::class);
+Route::get('/products/{limit}/{offset}', [App\Http\Controllers\ProductController::class, 'index'])
+    ->where(['limit' => '[0-9]+', 'offset' => '[0-9]+']);
+
+Route::get('/products/{nameSupplier}/{sortingType}', [App\Http\Controllers\ProductController::class, 'sort'])
+    ->where('sortingType', 'asc|desc');
+
+
+//suppliers
+Route::apiResource('/suppliers', App\Http\Controllers\SupplierController::class);
+Route::get('/suppliers/{limit}/{offset}', [App\Http\Controllers\ProductController::class, 'index'])
+    ->where(['limit' => '[0-9]+', 'offset' => '[0-9]+']);
+
