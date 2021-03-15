@@ -25,7 +25,7 @@ api реализовывает:
 :open_file_folder: Зайти в папку куда вы хотите загрузить проект, открыть консоль    
 :computer: Выполнить следующие команды:    
 ```php
-git clone https://github.com/Gaad018/apiForInterview
+git clone https://github.com/VladPil/apiForInterview
 cd apiForInterview
 composer install
 ```
